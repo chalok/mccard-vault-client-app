@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = "com.expedia.payment.vault.client.example.App"
+
+
+repositories {
+    maven { url "http://nexus.sb.karmalab.net/nexus/content/repositories/payments-releases/" }
+    maven { url "http://nexus.sb.karmalab.net/nexus/content/repositories/central/" }
+}
+
+dependencies {
+    compile('com.expedia.payments.vault:vault-client:2.47.33')
+    compile('com.expedia.payments.vault:vault-rest-interface:2.47.33')
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+  //  compile group: 'org.apache.poi', name: 'poi', version: '3.17'
+  //  compile group:'org.apache.poi',name: 'poi' ,version:'3.17'
+  //  compile group:'org.apache.poi' ,name:'poi-ooxml' ,version:'3.17'
+
+
+
+    testCompile 'junit:junit:+'
+}
+
+
+
