@@ -1,12 +1,3 @@
-# Vault Client Example Application
-
-## Quick Start
-
-    gradle clean build idea
-    
-## Features
-
-* Super Basic Request/Response Logging example
-* Registering a Credit Card
-* Dependency management with Gradle
-* Hits maui environment
+Works in maui env.
+Giving result for a sample 800 records from maui.
+Results stored in result.txt file
