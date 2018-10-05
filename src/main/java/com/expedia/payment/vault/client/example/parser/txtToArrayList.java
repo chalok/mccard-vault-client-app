@@ -6,13 +6,13 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class txtToArrayList {
-    private File file;
+    private InputStreamReader file;
     BufferedReader br;
-    public txtToArrayList(File file){
+    public txtToArrayList(InputStreamReader file){
         this.file = file;
         try {
-            br = new BufferedReader(new FileReader(file));}
-        catch (FileNotFoundException e){
+            br = new BufferedReader(file);}
+        catch (Exception e){
             System.out.println(e);}
     }
 

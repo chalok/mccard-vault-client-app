@@ -10,20 +10,20 @@ import java.util.UUID;
 public class test {
     public static void main(String[] args){
 
-        retrieveInstrument("C354E617-35BF-436A-8C5F-E7F7AB40457E");
+        retrieveInstrument("5D7AFA2D-6092-4E26-87A5-855DFFD8B723");
     }
 
     private static void retrieveInstrument(String paymentInstrument){
     PaymentVaultClient paymentVaultClient = RestClientFactory.getInstance();
         try {
-        //  System.out.println(paymentVaultClient.retrieveInstrument(paymentInstrument,UUID.randomUUID().toString()));
-        // paymentVaultClient.retrieveInstrument(registeredInstrument.getPaymentInstrumentID(), UUID.randomUUID().toString());
-        PaymentInstrument pi = paymentVaultClient.retrieveInstrument(paymentInstrument, UUID.randomUUID().toString());
+
+        PaymentInstrument pi = paymentVaultClient.retrieveInstrument(paymentInstrument.trim(), UUID.randomUUID().toString());
         System.out.println("brand: "+pi.getBrandName()+" "+pi.getBin());
 
     }
          catch (BaseClientException e) {
         //TODO handle exception for register
+             System.out.println(paymentInstrument);
         throw new RuntimeException(e);
     }
 }
